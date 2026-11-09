@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Работы — АСМН</title>
+  <meta name="description" content="Работы по металлоконструкциям, плазменной резке, ограждениям, сварке, вентиляции, инженерным системам, строительству и чертежам.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0e0f11">
+  <meta property="og:title" content="Работы — АСМН">
+  <meta property="og:description" content="Галерея работ по направлениям компании. Фотографии заменяются файлами из папки assets/images.">
+  <meta property="og:image" content="assets/images/construction.jpg">
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#content">К содержанию</a>
+  <header class="header header--solid">
+    <a class="logo" href="index.html">
+      <img src="assets/logo/logo.svg" width="42" height="42" alt="">
+      <span class="logo__text">
+        <span class="logo__name" data-bind="companyName">АСМН</span>
+        <span class="logo__meta">Инженерно-строительная компания</span>
+      </span>
+    </a>
+    <a class="header__phone" data-contact="phone" href="contacts.html#contacts" aria-label="Контакты">
+      <img src="assets/icons/phone.svg" width="18" height="18" alt="">
+      <span data-bind="phoneDisplay">+7 (___) ___-__-__</span>
+    </a>
+    <input class="nav-check" id="nav-check" type="checkbox">
+    <label class="nav-toggle" for="nav-check" aria-controls="nav" aria-expanded="false">
+      <span class="nav-toggle__open">Меню</span>
+      <span class="nav-toggle__close">Закрыть</span>
+    </label>
+    <nav class="nav" id="nav" aria-label="Основное меню">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Направления</a>
+      <a href="portfolio.html" aria-current="page">Работы</a>
+      <a href="contacts.html">Контакты</a>
+      <a class="btn" href="contacts.html#request">Обсудить проект</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Портфолио</p>
+        <h1>Выполненные работы</h1>
+        <p>Карточки разложены по типам работ. Чтобы поставить свой объект, замените фотографию в assets/images и подпись в этой странице.</p>
+      </div>
+    </header>
+
+    <section class="section section--dark" aria-labelledby="portfolio-title">
+      <div class="wrap">
+        <h2 class="vh" id="portfolio-title">Категории и карточки</h2>
+        <!-- Фильтр работает и без JavaScript: это переключатели, их состояние читает CSS. -->
+        <fieldset class="portfolio-board" id="works">
+          <legend class="vh">Категории работ</legend>
+          <input class="filter-input" type="radio" name="category" id="filter-all" value="all" checked>
+          <input class="filter-input" type="radio" name="category" id="filter-metal" value="metal">
+          <input class="filter-input" type="radio" name="category" id="filter-plasma" value="plasma">
+          <input class="filter-input" type="radio" name="category" id="filter-fence" value="fence">
+          <input class="filter-input" type="radio" name="category" id="filter-weld" value="weld">
+          <input class="filter-input" type="radio" name="category" id="filter-hvac" value="hvac">
+          <input class="filter-input" type="radio" name="category" id="filter-engineering" value="engineering">
+          <input class="filter-input" type="radio" name="category" id="filter-construction" value="construction">
+          <input class="filter-input" type="radio" name="category" id="filter-drawings" value="drawings">
+
+          <div class="filters">
+            <label for="filter-all">Все</label>
+            <label for="filter-metal">Металлоконструкции</label>
+            <label for="filter-plasma">Плазменная резка ЧПУ</label>
+            <label for="filter-fence">Решётки и ограждения</label>
+            <label for="filter-weld">Сварка и покраска</label>
+            <label for="filter-hvac">Вентиляция и кондиционирование</label>
+            <label for="filter-engineering">Инженерные системы</label>
+            <label for="filter-construction">Строительство</label>
+            <label for="filter-drawings">Чертежи и дизайн-макеты</label>
+          </div>
+
+          <div class="portfolio-grid">
+            <article class="work" data-category="metal">
+              <a class="shot" href="assets/images/metal-truss.jpg" data-lightbox data-caption="Несущие металлоконструкции. Замените подпись названием объекта.">
+                <img src="assets/images/metal-truss.jpg" width="1152" height="864" alt="Стальные фермы и балки" loading="lazy">
+              </a>
+              <div class="work__body">
+                <h2>Несущие металлоконструкции</h2>
+                <p>Каркасы, фермы и балки. Здесь будет название объекта.</p>
+              </div>
+            </article>
+            <article class="work" data-category="plasma">
+              <a class="shot" href="assets/images/plasma-cnc.jpg" data-lightbox data-caption="Плазменная резка листа на ЧПУ.">
+                <img src="assets/images/plasma-cnc.jpg" width="1152" height="864" alt="Плазменная резка стального листа" loading="lazy">
+              </a>
+              <div class="work__body">
+                <h2>Раскрой листа</h2>
+                <p>Плазменная резка по чертежу. Здесь будет название партии или объекта.</p>
+              </div>
+            </article>
+            <article class="work" data-category="fence">
+              <a class="shot" href="assets/images/fence-grille.jpg" data-lightbox data-caption="Решётки и ограждения.">
+                <img src="assets/images/fence-grille.jpg" width="1152" height="864" alt="Металлический забор и решётки" loading="lazy">
+              </a>
+              <div class="work__body">
+                <h2>Ограждение</h2>
+                <p>Решётки, забор или панели. Подставьте объект и адрес, когда фотография станет вашей.</p>
+              </div>
+            </article>
+            <article class="work" data-category="weld">
+              <a class="shot" href="assets/images/welding.jpg" data-lightbox data-caption="Сварка узлов металлоконструкций.">
+                <img src="assets/images/welding.jpg" width="1152" height="864" alt="Сварка стальной конструкции" loading="lazy">
+              </a>
+              <div class="work__body">
+                <h2>Сварка узлов</h2>
+                <p>Сборочные швы по чертежу.</p>
+              </div>
+            </article>
+            <article class="work" data-category="weld">
+              <a class="shot" href="assets/images/painting.jpg" data-lightbox data-caption="Покраска металлоизделий.">
+                <img src="assets/images/painting.jpg" width="1152" height="864" alt="Покраска металлических деталей" loading="lazy">
+              </a>
+              <div class="work__body">
+                <h2>Покраска изделий</h2>
+                <p>Защитное покрытие перед отгрузкой или монтажом.</p>
+              </div>
+            </article>
+            <article class="work" data-category="hvac">
+              <a class="shot" href="assets/images/ventilation.jpg" data-lightbox data-caption="Вентиляция: воздуховоды.">
+                <img src="assets/images/ventilation.jpg" width="1152" height="864" alt="Смонтированные воздуховоды" loading="lazy">
+              </a>
+              <div class="work__body">
+                <h2>Воздуховоды</h2>
+                <p>Участок вентиляции. Название объекта ставится вместо этой строки.</p>
+              </div>
+            </article>
+            <article class="work" data-category="engineering">
+              <a class="shot" href="assets/images/electrical.jpg" data-lightbox data-caption="Электрика: трассы и шкафы.">
+                <img src="assets/images/electrical.jpg" width="1152" height="864" alt="Кабельные лотки и шкафы" loading="lazy">
+              </a>
+              <div class="work__body">
+                <h2>Кабельные трассы</h2>
+                <p>Электроснабжение и слаботочные линии.</p>
+              </div>
+            </article>
+            <article class="work" data-category="engineering">
+              <a class="shot" href="assets/images/utilities.jpg" data-lightbox data-caption="Инженерные сети.">
+                <img src="assets/images/utilities.jpg" width="1152" height="864" alt="Трубопроводы инженерных коммуникаций" loading="lazy">
+              </a>
+              <div class="work__body">
+                <h2>Сети и коммуникации</h2>
+                <p>Трубопроводы и узлы инженерных сетей.</p>
+              </div>
+            </article>
+            <article class="work" data-category="construction">
+              <a class="shot" href="assets/images/concrete.jpg" data-lightbox data-caption="Монолитный каркас.">
+                <img src="assets/images/concrete.jpg" width="1152" height="864" alt="Монолитные колонны и перекрытия" loading="lazy">
+              </a>
+              <div class="work__body">
+                <h2>Монолитный каркас</h2>
+                <p>Бетонные и монолитные конструкции.</p>
+              </div>
+            </article>
+            <article class="work" data-category="construction">
+              <a class="shot" href="assets/images/construction.jpg" data-lightbox data-caption="Строительная площадка.">
+                <img src="assets/images/construction.jpg" width="1280" height="720" alt="Каркас здания на монтаже" loading="lazy">
+              </a>
+              <div class="work__body">
+                <h2>Площадка</h2>
+                <p>Комплексное строительство. Название объекта заменяет эту подпись.</p>
+              </div>
+            </article>
+            <article class="work" data-category="drawings">
+              <a class="shot" href="assets/images/drawings.jpg" data-lightbox data-caption="Чертежи и развёртки.">
+                <img src="assets/images/drawings.jpg" width="1152" height="864" alt="Комплект технических чертежей" loading="lazy">
+              </a>
+              <div class="work__body">
+                <h2>Чертежи</h2>
+                <p>Узлы, развёртки и дизайн-макет. В подпись ставится шифр или имя комплекта.</p>
+              </div>
+            </article>
+          </div>
+          <p class="filter-count" aria-live="polite"></p>
+          <p class="filter-empty" hidden>В этой категории пока нет работ.</p>
+        </fieldset>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="wrap footer__grid">
+      <div>
+        <a class="logo" href="index.html">
+          <img src="assets/logo/logo.svg" width="42" height="42" alt="">
+          <span class="logo__name" data-bind="companyName">АСМН</span>
+        </a>
+        <p>Инженерно-строительная компания полного цикла. Собственное производство и собственные бригады.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Нижнее меню">
+        <h2>Разделы</h2>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Направления</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="brochure.html">Рекламный буклет</a>
+        <a href="contacts.html#request">Обсудить проект</a>
+      </nav>
+      <div>
+        <h2>Контакты</h2>
+        <address>
+          <a data-contact="phone" href="contacts.html#contacts"><span data-bind="phoneDisplay">+7 (___) ___-__-__</span></a>
+          <a data-contact="email" data-email-text href="contacts.html#contacts">Укажите электронную почту</a>
+          <span data-bind="address">Укажите адрес офиса и производства</span>
+          <span data-bind="hours">Укажите график работы</span>
+        </address>
+      </div>
+    </div>
+    <div class="wrap footer__bar">
+      <p>© <span data-year>2026</span> <span data-bind="companyName">АСМН</span></p>
+      <a href="#content">Наверх страницы</a>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" hidden>
+    <img src="assets/icons/arrow-up.svg" width="16" height="16" alt="">
+    Наверх
+  </button>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox__backdrop" data-lightbox-close></div>
+    <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+      <button class="lightbox__close" type="button" data-lightbox-close>Закрыть</button>
+      <button class="lightbox__nav" type="button" data-lightbox-prev aria-label="Предыдущее фото">←</button>
+      <figure class="lightbox__figure">
+        <img class="lightbox__image" alt="">
+        <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+      </figure>
+      <button class="lightbox__nav" type="button" data-lightbox-next aria-label="Следующее фото">→</button>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

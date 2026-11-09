@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакты — АСМН</title>
+  <meta name="description" content="Контакты инженерно-строительной компании и форма заявки с прикреплением чертежа или фотографии.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0e0f11">
+  <meta property="og:title" content="Контакты — АСМН">
+  <meta property="og:description" content="Заявка на металлоконструкции, инженерные системы и строительные работы.">
+  <meta property="og:image" content="assets/images/hero-workshop.jpg">
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#content">К содержанию</a>
+  <header class="header header--solid">
+    <a class="logo" href="index.html">
+      <img src="assets/logo/logo.svg" width="42" height="42" alt="">
+      <span class="logo__text">
+        <span class="logo__name" data-bind="companyName">АСМН</span>
+        <span class="logo__meta">Инженерно-строительная компания</span>
+      </span>
+    </a>
+    <a class="header__phone" data-contact="phone" href="#contacts" aria-label="Контакты">
+      <img src="assets/icons/phone.svg" width="18" height="18" alt="">
+      <span data-bind="phoneDisplay">+7 (___) ___-__-__</span>
+    </a>
+    <input class="nav-check" id="nav-check" type="checkbox">
+    <label class="nav-toggle" for="nav-check" aria-controls="nav" aria-expanded="false">
+      <span class="nav-toggle__open">Меню</span>
+      <span class="nav-toggle__close">Закрыть</span>
+    </label>
+    <nav class="nav" id="nav" aria-label="Основное меню">
+      <a href="index.html">Главная</a>
+      <a href="services.html">Направления</a>
+      <a href="portfolio.html">Работы</a>
+      <a href="contacts.html" aria-current="page">Контакты</a>
+      <a class="btn" href="#request">Обсудить проект</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Связь</p>
+        <h1>Контакты и заявка</h1>
+        <p>Телефон, почта и адрес подставляются из файла js/config.js. Пока там заглушки, страница не выдумывает чужие реквизиты.</p>
+      </div>
+    </header>
+
+    <section class="section section--dark" id="contacts" aria-labelledby="contacts-title">
+      <div class="wrap form-layout">
+        <div>
+          <h2 id="contacts-title">Как связаться</h2>
+          <ul class="contact-list">
+            <li>
+              <span class="fine">Телефон</span>
+              <a data-contact="phone" href="#request"><span data-bind="phoneDisplay">+7 (___) ___-__-__</span></a>
+            </li>
+            <li>
+              <span class="fine">Электронная почта</span>
+              <a data-contact="email" data-email-text href="#request">Укажите электронную почту</a>
+            </li>
+            <li>
+              <span class="fine">Адрес</span>
+              <span data-bind="address">Укажите адрес офиса и производства</span>
+            </li>
+            <li>
+              <span class="fine">График</span>
+              <span data-bind="hours">Укажите график работы</span>
+            </li>
+          </ul>
+          <div class="map-placeholder" aria-label="Место для карты">
+            <p data-map-note>Карта не подключена. Когда появится ссылка на карту, впишите её в mapUrl в js/config.js — кнопка откроется сама.</p>
+            <p data-bind="address">Укажите адрес офиса и производства</p>
+            <a class="btn" data-map-link href="#contacts" hidden>Открыть карту</a>
+          </div>
+        </div>
+
+        <form class="request-form" id="request" data-request-form action="#request" method="post" enctype="multipart/form-data" novalidate>
+          <h2>Обсудить проект</h2>
+          <div class="hp" aria-hidden="true">
+            <label>Сайт<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <div class="field">
+            <label for="contact-name">Имя <span class="req" aria-hidden="true">*</span></label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" required maxlength="80">
+            <p class="field__error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="contact-phone">Телефон <span class="req" aria-hidden="true">*</span></label>
+            <input id="contact-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="40">
+            <p class="field__error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="contact-email">Электронная почта <span class="req" aria-hidden="true">*</span></label>
+            <input id="contact-email" name="email" type="email" inputmode="email" autocomplete="email" required maxlength="120">
+            <p class="field__error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="contact-direction">Направление работ <span class="req" aria-hidden="true">*</span></label>
+            <select id="contact-direction" name="direction" required>
+              <option value="">Выберите направление</option>
+              <option>Металлоконструкции</option>
+              <option>Плазменная резка ЧПУ</option>
+              <option>Решётки и ограждения</option>
+              <option>Сварка и покраска</option>
+              <option>Чертежи и дизайн-макеты</option>
+              <option>Вентиляция и кондиционирование</option>
+              <option>Электрика и слаботочные системы</option>
+              <option>Инженерные сети</option>
+              <option>Бетонные и монолитные работы</option>
+              <option>Комплексное строительство</option>
+              <option>ПТО и исполнительная документация</option>
+              <option>Несколько направлений</option>
+            </select>
+            <p class="field__error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="contact-message">Описание задачи <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="contact-message" name="message" required maxlength="4000"></textarea>
+            <p class="field__error" hidden></p>
+          </div>
+          <label class="dropzone">
+            <input class="dropzone__input" type="file" name="files[]" accept=".jpg,.jpeg,.png,.webp,.gif,.pdf,.dwg,.dxf,image/*,application/pdf" multiple>
+            <span>Прикрепить чертёж или фотографию</span>
+            <span class="dropzone__hint">JPG, PNG, WEBP, GIF, PDF, DWG, DXF. До 4 файлов, каждый до 10 МБ.</span>
+          </label>
+          <p class="file-error" hidden></p>
+          <ul class="file-list"></ul>
+          <button class="btn" type="submit">Отправить заявку</button>
+          <p class="form-status" role="status" hidden></p>
+          <noscript>
+            <p>Без JavaScript форма не отправляет данные. Сначала укажите телефон и почту в js/config.js.</p>
+          </noscript>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__bar">
+      <p>© <span data-year>2026</span> <span data-bind="companyName">АСМН</span></p>
+      <nav class="footer__links" aria-label="Нижнее меню">
+        <a href="index.html">Главная</a>
+        <a href="services.html">Направления</a>
+        <a href="portfolio.html">Работы</a>
+        <a href="brochure.html">Рекламный буклет</a>
+      </nav>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" hidden>
+    <img src="assets/icons/arrow-up.svg" width="16" height="16" alt="">
+    Наверх
+  </button>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

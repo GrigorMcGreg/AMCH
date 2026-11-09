@@ -1,0 +1,272 @@
+/* ==========================================================================
+   Трёхстворчатый буклет, A4 альбомный.
+   Внешняя сторона слева направо: клапан 97,67 мм, задник 99,67 мм, обложка 99,67 мм.
+   Внутренняя сторона в файле печати зеркальна, на экране показана в порядке чтения.
+   ========================================================================== */
+
+:root {
+  --full: 33.5578%;
+  --flap: 32.8844%;
+  --orange: #ff5c1c;
+  --ink: #141618;
+  --paper: #f3f4f5;
+  --graphite: #121416;
+  --muted: #5e666e;
+  --display: "Bahnschrift", "Arial Narrow", "Segoe UI", sans-serif;
+  --body: "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #2a2d31;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 9.5pt;
+  line-height: 1.35;
+}
+
+.toolbar {
+  width: min(297mm, calc(100% - 1.5rem));
+  margin: 1rem auto 0.5rem;
+  color: #f4f5f6;
+}
+
+.toolbar .brochure-title {
+  margin: 0 0 0.4rem;
+  color: #f4f5f6;
+  font-family: var(--display);
+  font-size: 1.6rem;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+
+.toolbar p,
+.toolbar ol {
+  margin: 0.4rem 0;
+  color: #d5d8dc;
+}
+
+.toolbar .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.8rem 0;
+}
+
+.toolbar button,
+.toolbar a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.6rem;
+  padding: 0.4rem 0.9rem;
+  border: 0;
+  background: var(--orange);
+  color: #1a0c07;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.toolbar a.ghost {
+  background: transparent;
+  color: #f4f5f6;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.sheet-label {
+  width: 297mm;
+  max-width: calc(100% - 1.5rem);
+  margin: 1rem auto 0.35rem;
+  color: #c5cad0;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sheet {
+  display: flex;
+  width: 297mm;
+  height: 210mm;
+  margin: 0 auto 1.25rem;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+.panel {
+  height: 210mm;
+  overflow: hidden;
+  position: relative;
+}
+
+.panel--full { width: var(--full); flex: 0 0 var(--full); }
+.panel--flap { width: var(--flap); flex: 0 0 var(--flap); }
+
+.panel__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 8mm 7mm 7mm;
+}
+
+.panel--flap .panel__inner { padding-inline: 6mm; }
+
+.kicker {
+  margin: 0 0 2mm;
+  color: var(--orange);
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h2, .cover__title {
+  margin: 0 0 3mm;
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 0.96;
+}
+
+h2 { font-size: 18pt; }
+.cover__title { font-size: 23pt; color: #f4f5f6; }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 2.5mm;
+  margin-bottom: 4mm;
+  font-family: var(--display);
+  font-size: 11pt;
+  letter-spacing: -0.02em;
+}
+
+.brand img { width: 8mm; height: 8mm; }
+
+ul {
+  margin: 0 0 3mm;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 1.3mm 0;
+  border-top: 0.2mm solid rgba(20, 22, 24, 0.14);
+}
+
+.dark li { border-top-color: rgba(255, 255, 255, 0.16); }
+
+.photo {
+  width: 100%;
+  object-fit: cover;
+  margin-top: auto;
+}
+
+.photo--mid { height: 58mm; }
+.photo--small { height: 42mm; }
+
+.note {
+  margin: 2mm 0 0;
+  color: var(--muted);
+  font-size: 8pt;
+}
+
+.dark {
+  background: var(--graphite);
+  color: #f4f5f6;
+}
+
+.dark .note { color: #b7bec5; }
+
+.cover {
+  color: #f4f5f6;
+}
+
+.cover__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover__shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 9, 10, 0.2) 0%, rgba(8, 9, 10, 0.18) 40%, rgba(8, 9, 10, 0.88) 100%);
+}
+
+.cover .panel__inner {
+  position: relative;
+  z-index: 1;
+  justify-content: flex-end;
+}
+
+.cover .brand { margin-top: auto; margin-bottom: 4mm; }
+
+.rule {
+  width: 12mm;
+  height: 0.7mm;
+  margin-bottom: 3mm;
+  background: var(--orange);
+}
+
+.columns {
+  columns: 2;
+  column-gap: 4mm;
+}
+
+.columns li { break-inside: avoid; }
+
+.steps li strong {
+  display: block;
+  font-family: var(--display);
+}
+
+@media screen and (max-width: 1180px) {
+  body { overflow-x: auto; }
+  .sheet, .sheet-label { margin-left: 0.75rem; }
+}
+
+@media screen {
+  .sheet--inside { flex-direction: row-reverse; }
+}
+
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+@media print {
+  .no-print { display: none !important; }
+
+  html, body {
+    width: 297mm;
+    background: #fff !important;
+  }
+
+  .sheet {
+    margin: 0;
+    box-shadow: none;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .sheet:last-of-type {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

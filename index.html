@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>АСМН — от проекта до реализации</title>
+  <meta name="description" content="Инженерно-строительная компания полного цикла: металлоконструкции, плазменная резка на ЧПУ, инженерные системы, монолитные работы и исполнительная документация.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0e0f11">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="АСМН — от проекта до реализации">
+  <meta property="og:description" content="Полный комплекс работ: от чертежа и производства металлоконструкций до монтажа и исполнительной документации.">
+  <meta property="og:image" content="assets/images/hero-workshop.jpg">
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/images/hero-workshop.jpg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#content">К содержанию</a>
+
+  <header class="header">
+    <a class="logo" href="index.html">
+      <img src="assets/logo/logo.svg" width="42" height="42" alt="">
+      <span class="logo__text">
+        <span class="logo__name" data-bind="companyName">АСМН</span>
+        <span class="logo__meta">Инженерно-строительная компания</span>
+      </span>
+    </a>
+    <a class="header__phone" data-contact="phone" href="#contacts" aria-label="Контакты">
+      <img src="assets/icons/phone.svg" width="18" height="18" alt="">
+      <span data-bind="phoneDisplay">+7 (___) ___-__-__</span>
+    </a>
+    <input class="nav-check" id="nav-check" type="checkbox">
+    <label class="nav-toggle" for="nav-check" aria-controls="nav" aria-expanded="false">
+      <span class="nav-toggle__open">Меню</span>
+      <span class="nav-toggle__close">Закрыть</span>
+    </label>
+    <nav class="nav" id="nav" aria-label="Основное меню">
+      <a href="index.html" aria-current="page">Главная</a>
+      <a href="services.html">Направления</a>
+      <a href="portfolio.html">Работы</a>
+      <a href="contacts.html">Контакты</a>
+      <a class="btn" href="#request">Обсудить проект</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <!-- Фото первого экрана: assets/images/hero-workshop.jpg -->
+      <div class="hero__media">
+        <img src="assets/images/hero-workshop.jpg" width="1280" height="720" alt="Цех металлоконструкций: ряды балок и мостовой кран" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="eyebrow">Инженерно-строительная компания</p>
+        <h1>От проекта до реализации. Полный комплекс работ</h1>
+        <p class="lead">Производство металлоконструкций, инженерные системы и строительные работы. Своя площадка и свои бригады: от чертежа до исполнительной документации.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#request">Обсудить проект</a>
+          <a class="btn btn--ghost" href="portfolio.html">Наши работы</a>
+        </div>
+        <ul class="spec">
+          <li><a href="#production">Металлоконструкции</a></li>
+          <li><a href="services.html#plasma">Плазменная резка ЧПУ</a></li>
+          <li><a href="#engineering">Инженерные системы</a></li>
+          <li><a href="#construction">Строительство</a></li>
+          <li><a href="#pto">ПТО</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--light" aria-labelledby="advantages-title">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Как устроена работа</p>
+          <h2 id="advantages-title">Свой контур: проект, цех, монтаж, документы</h2>
+        </div>
+        <div class="advantages reveal">
+          <article class="advantage">
+            <span class="mark-line" aria-hidden="true"></span>
+            <h3>Полный цикл</h3>
+            <p>Чертёж, изготовление, монтаж и комплект документов остаются в одном контуре, без разрыва между проектом и площадкой.</p>
+          </article>
+          <article class="advantage">
+            <span class="mark-line" aria-hidden="true"></span>
+            <h3>Своё производство</h3>
+            <p>Металлоконструкции, раскрой на ЧПУ, сварка и покраска выполняются на собственной площадке.</p>
+          </article>
+          <article class="advantage">
+            <span class="mark-line" aria-hidden="true"></span>
+            <h3>Свои бригады</h3>
+            <p>Строительные и монтажные работы ведут бригады компании.</p>
+          </article>
+          <article class="advantage">
+            <span class="mark-line" aria-hidden="true"></span>
+            <h3>Отдел ПТО</h3>
+            <p>Производственно-технический отдел ведёт документацию по ходу работ и собирает исполнительный комплект.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="directions" aria-labelledby="directions-title">
+      <div class="wrap directions">
+        <div class="directions__intro reveal">
+          <p class="eyebrow">Направления</p>
+          <h2 id="directions-title">Одиннадцать составов работ</h2>
+          <p class="lead">Откройте карточку, чтобы увидеть состав. Подробное описание — на странице направления.</p>
+          <p><a class="text-link" href="services.html">Все направления</a></p>
+        </div>
+        <div class="reveal">
+          <details class="service-row">
+            <summary>
+              <span class="service-row__index">01</span>
+              <span class="service-row__title">Металлоконструкции любой сложности</span>
+              <img class="icon" src="assets/icons/metal.svg" width="28" height="28" alt="">
+            </summary>
+            <div class="service-row__body">
+              <p>Каркасы, фермы, балки, площадки, лестницы и закладные детали: изготовление и монтаж.</p>
+              <a class="text-link" href="services.html#metal">Подробнее о направлении</a>
+            </div>
+          </details>
+          <details class="service-row">
+            <summary>
+              <span class="service-row__index">02</span>
+              <span class="service-row__title">Плазменная резка металла на ЧПУ</span>
+              <img class="icon" src="assets/icons/plasma.svg" width="28" height="28" alt="">
+            </summary>
+            <div class="service-row__body">
+              <p>Раскрой листа по чертежам заказчика или по чертежам, которые готовит компания.</p>
+              <a class="text-link" href="services.html#plasma">Подробнее о направлении</a>
+            </div>
+          </details>
+          <details class="service-row">
+            <summary>
+              <span class="service-row__index">03</span>
+              <span class="service-row__title">Решётки, заборы, ограждения и панели</span>
+              <img class="icon" src="assets/icons/fence.svg" width="28" height="28" alt="">
+            </summary>
+            <div class="service-row__body">
+              <p>Изготовление решёток, заборов, ограждений и металлических панелей, включая покраску и монтаж.</p>
+              <a class="text-link" href="services.html#fence">Подробнее о направлении</a>
+            </div>
+          </details>
+          <details class="service-row">
+            <summary>
+              <span class="service-row__index">04</span>
+              <span class="service-row__title">Сварочные работы и покраска</span>
+              <img class="icon" src="assets/icons/weld.svg" width="28" height="28" alt="">
+            </summary>
+            <div class="service-row__body">
+              <p>Сборка узлов сваркой и защитная покраска готовых изделий.</p>
+              <a class="text-link" href="services.html#weld">Подробнее о направлении</a>
+            </div>
+          </details>
+          <details class="service-row">
+            <summary>
+              <span class="service-row__index">05</span>
+              <span class="service-row__title">Чертежи и дизайн-макеты</span>
+              <img class="icon" src="assets/icons/draft.svg" width="28" height="28" alt="">
+            </summary>
+            <div class="service-row__body">
+              <p>Технические чертежи, узлы, развёртки для резки и дизайн-макеты изделий.</p>
+              <a class="text-link" href="services.html#draft">Подробнее о направлении</a>
+            </div>
+          </details>
+          <details class="service-row">
+            <summary>
+              <span class="service-row__index">06</span>
+              <span class="service-row__title">Вентиляция и кондиционирование</span>
+              <img class="icon" src="assets/icons/vent.svg" width="28" height="28" alt="">
+            </summary>
+            <div class="service-row__body">
+              <p>Проектирование и монтаж систем вентиляции и кондиционирования.</p>
+              <a class="text-link" href="services.html#hvac">Подробнее о направлении</a>
+            </div>
+          </details>
+          <details class="service-row">
+            <summary>
+              <span class="service-row__index">07</span>
+              <span class="service-row__title">Электрика и слаботочные системы</span>
+              <img class="icon" src="assets/icons/electric.svg" width="28" height="28" alt="">
+            </summary>
+            <div class="service-row__body">
+              <p>Электроснабжение, освещение, кабельные трассы и слаботочные системы.</p>
+              <a class="text-link" href="services.html#electric">Подробнее о направлении</a>
+            </div>
+          </details>
+          <details class="service-row">
+            <summary>
+              <span class="service-row__index">08</span>
+              <span class="service-row__title">Инженерные сети и коммуникации</span>
+              <img class="icon" src="assets/icons/pipes.svg" width="28" height="28" alt="">
+            </summary>
+            <div class="service-row__body">
+              <p>Внутренние и наружные инженерные сети.</p>
+              <a class="text-link" href="services.html#networks">Подробнее о направлении</a>
+            </div>
+          </details>
+          <details class="service-row">
+            <summary>
+              <span class="service-row__index">09</span>
+              <span class="service-row__title">Бетонные и монолитные работы</span>
+              <img class="icon" src="assets/icons/concrete.svg" width="28" height="28" alt="">
+            </summary>
+            <div class="service-row__body">
+              <p>Фундаменты, каркасы, перекрытия и другие монолитные конструкции.</p>
+              <a class="text-link" href="services.html#concrete">Подробнее о направлении</a>
+            </div>
+          </details>
+          <details class="service-row">
+            <summary>
+              <span class="service-row__index">10</span>
+              <span class="service-row__title">Комплексное строительство</span>
+              <img class="icon" src="assets/icons/building.svg" width="28" height="28" alt="">
+            </summary>
+            <div class="service-row__body">
+              <p>Организация строительства объекта силами собственного производства и собственных бригад.</p>
+              <a class="text-link" href="services.html#build">Подробнее о направлении</a>
+            </div>
+          </details>
+          <details class="service-row">
+            <summary>
+              <span class="service-row__index">11</span>
+              <span class="service-row__title">Отдел ПТО и исполнительная документация</span>
+              <img class="icon" src="assets/icons/docs.svg" width="28" height="28" alt="">
+            </summary>
+            <div class="service-row__body">
+              <p>Ведение производственно-технической документации и сбор исполнительного комплекта.</p>
+              <a class="text-link" href="services.html#pto">Подробнее о направлении</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="production" aria-labelledby="production-title">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Производство</p>
+          <h2 id="production-title">Металлоконструкции и плазменная резка</h2>
+          <p class="lead">Цех закрывает раскрой, сборку, сварку и покраску. Монтаж на объекте делают свои бригады.</p>
+        </div>
+        <div class="tiles tiles--production reveal">
+          <a class="tile" href="services.html#metal">
+            <span class="tile__media"><img src="assets/images/metal-truss.jpg" width="1152" height="864" alt="Собранные стальные фермы и балки" loading="lazy"></span>
+            <span class="tile__shade" aria-hidden="true"></span>
+            <span class="tile__label">
+              <span class="tile__title">Металлоконструкции</span>
+              <span class="tile__more">Смотреть направление</span>
+            </span>
+          </a>
+          <a class="tile" href="services.html#plasma">
+            <span class="tile__media"><img src="assets/images/plasma-cnc.jpg" width="1152" height="864" alt="Станок плазменной резки с ЧПУ режет стальной лист" loading="lazy"></span>
+            <span class="tile__shade" aria-hidden="true"></span>
+            <span class="tile__label">
+              <span class="tile__title">Плазменная резка ЧПУ</span>
+              <span class="tile__more">Смотреть направление</span>
+            </span>
+          </a>
+          <a class="tile" href="services.html#weld">
+            <span class="tile__media"><img src="assets/images/welding.jpg" width="1152" height="864" alt="Сварка металлоконструкции в цехе" loading="lazy"></span>
+            <span class="tile__shade" aria-hidden="true"></span>
+            <span class="tile__label">
+              <span class="tile__title">Сварка и покраска</span>
+              <span class="tile__more">Смотреть направление</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light" id="engineering" aria-labelledby="engineering-title">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Инженерные системы</p>
+          <h2 id="engineering-title">Воздух, электрика, сети</h2>
+        </div>
+        <div class="tiles tiles--three reveal">
+          <a class="tile" href="services.html#hvac">
+            <span class="tile__media"><img src="assets/images/ventilation.jpg" width="1152" height="864" alt="Промышленные воздуховоды под потолком технического помещения" loading="lazy"></span>
+            <span class="tile__shade" aria-hidden="true"></span>
+            <span class="tile__label"><span class="tile__title">Вентиляция и кондиционирование</span><span class="tile__more">Смотреть направление</span></span>
+          </a>
+          <a class="tile" href="services.html#electric">
+            <span class="tile__media"><img src="assets/images/electrical.jpg" width="1152" height="864" alt="Кабельные лотки и распределительные шкафы" loading="lazy"></span>
+            <span class="tile__shade" aria-hidden="true"></span>
+            <span class="tile__label"><span class="tile__title">Электрика и слаботочные системы</span><span class="tile__more">Смотреть направление</span></span>
+          </a>
+          <a class="tile" href="services.html#networks">
+            <span class="tile__media"><img src="assets/images/utilities.jpg" width="1152" height="864" alt="Трубопроводы инженерных сетей вдоль бетонной стены" loading="lazy"></span>
+            <span class="tile__shade" aria-hidden="true"></span>
+            <span class="tile__label"><span class="tile__title">Инженерные сети</span><span class="tile__more">Смотреть направление</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--flush section--light" id="construction" aria-labelledby="construction-title">
+      <div class="split">
+        <div class="split__media">
+          <img src="assets/images/concrete.jpg" width="1152" height="864" alt="Монолитный каркас здания: колонны и перекрытия" loading="lazy">
+        </div>
+        <div class="split__copy reveal">
+          <p class="eyebrow">Строительство</p>
+          <h2 id="construction-title">Бетон, монтаж и объект целиком</h2>
+          <ul class="checklist">
+            <li>Бетонные и монолитные работы: фундаменты, каркасы, перекрытия.</li>
+            <li>Монтаж металлоконструкций и инженерных систем на площадке.</li>
+            <li>Комплексное строительство силами своих бригад и своего цеха.</li>
+          </ul>
+          <div class="actions">
+            <a class="btn" href="services.html#concrete">Монолитные работы</a>
+            <a class="btn btn--ghost" href="services.html#build">Комплексное строительство</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--flush" id="pto" aria-labelledby="pto-title">
+      <div class="split split--reverse">
+        <div class="split__media">
+          <img src="assets/images/drawings.jpg" width="1152" height="864" alt="Технические чертежи на столе рядом с металлической линейкой" loading="lazy">
+        </div>
+        <div class="split__copy reveal">
+          <p class="eyebrow">Проект и ПТО</p>
+          <h2 id="pto-title">Чертежи, макеты и исполнительная документация</h2>
+          <p>До цеха готовятся чертежи, узлы и развёртки. На объекте отдел ПТО собирает исполнительную документацию по фактическим работам.</p>
+          <div class="actions">
+            <a class="btn" href="services.html#draft">Чертежи и макеты</a>
+            <a class="btn btn--ghost" href="services.html#pto">Отдел ПТО</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="works" aria-labelledby="works-title">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Работы</p>
+          <h2 id="works-title">Галерея по направлениям</h2>
+          <p class="lead">Снимки показывают тип работ. Название объекта и файл фотографии меняются в <a href="portfolio.html">портфолио</a> и в папке assets/images.</p>
+        </div>
+        <div class="gallery reveal">
+          <a class="shot" href="assets/images/metal-truss.jpg" data-lightbox data-caption="Несущие металлоконструкции: каркасы, фермы и балки.">
+            <img src="assets/images/metal-truss.jpg" width="1152" height="864" alt="Стальные фермы и балки в цехе" loading="lazy">
+            <span class="shot__caption">Несущие металлоконструкции</span>
+          </a>
+          <a class="shot" href="assets/images/plasma-cnc.jpg" data-lightbox data-caption="Плазменная резка листа на станке с ЧПУ.">
+            <img src="assets/images/plasma-cnc.jpg" width="1152" height="864" alt="Плазменная резка стального листа" loading="lazy">
+            <span class="shot__caption">Плазменная резка ЧПУ</span>
+          </a>
+          <a class="shot" href="assets/images/fence-grille.jpg" data-lightbox data-caption="Решётки, заборы и металлические ограждения.">
+            <img src="assets/images/fence-grille.jpg" width="1152" height="864" alt="Чёрное металлическое ограждение у бетонного здания" loading="lazy">
+            <span class="shot__caption">Решётки и ограждения</span>
+          </a>
+          <a class="shot" href="assets/images/ventilation.jpg" data-lightbox data-caption="Воздуховоды систем вентиляции.">
+            <img src="assets/images/ventilation.jpg" width="1152" height="864" alt="Сеть металлических воздуховодов" loading="lazy">
+            <span class="shot__caption">Вентиляция</span>
+          </a>
+          <a class="shot" href="assets/images/construction.jpg" data-lightbox data-caption="Строительная площадка: стальной и бетонный каркас.">
+            <img src="assets/images/construction.jpg" width="1280" height="720" alt="Каркас промышленного здания на стадии монтажа" loading="lazy">
+            <span class="shot__caption">Строительство</span>
+          </a>
+          <a class="shot" href="assets/images/painting.jpg" data-lightbox data-caption="Покраска металлоизделий.">
+            <img src="assets/images/painting.jpg" width="1152" height="864" alt="Металлические панели в камере покраски" loading="lazy">
+            <span class="shot__caption">Покраска</span>
+          </a>
+        </div>
+        <p class="reveal"><a class="text-link" href="portfolio.html">Смотреть все работы</a></p>
+      </div>
+    </section>
+
+    <section class="section section--light" id="steps" aria-labelledby="steps-title">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Сотрудничество</p>
+          <h2 id="steps-title">Как проходит работа</h2>
+        </div>
+        <ol class="steps reveal">
+          <li>
+            <h3>Заявка</h3>
+            <p>Описываете задачу и прикладываете чертёж или фотографию, если они уже есть.</p>
+          </li>
+          <li>
+            <h3>Исходные данные</h3>
+            <p>Собираем размеры, условия площадки и то, что уже запроектировано.</p>
+          </li>
+          <li>
+            <h3>Чертежи и смета</h3>
+            <p>Готовим или проверяем чертежи и согласовываем состав работ.</p>
+          </li>
+          <li>
+            <h3>Производство</h3>
+            <p>Режем, собираем, свариваем и красим на своей площадке.</p>
+          </li>
+          <li>
+            <h3>Монтаж</h3>
+            <p>Бригады устанавливают конструкции и выполняют строительные работы.</p>
+          </li>
+          <li>
+            <h3>Документы</h3>
+            <p>ПТО закрывает исполнительную документацию по сделанному.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="request" aria-labelledby="request-title">
+      <div class="wrap form-layout">
+        <div class="form-aside reveal">
+          <p class="eyebrow">Заявка</p>
+          <h2 id="request-title">Обсудить проект</h2>
+          <p>Напишите, что нужно сделать. Если есть чертёж, эскиз или фотография объекта — приложите файл.</p>
+          <p>В письме полезны адрес объекта, какие решения уже приняты и какие направления нужны сразу.</p>
+          <div class="actions">
+            <a class="btn btn--ghost" data-contact="phone" href="#contacts">Телефон</a>
+            <a class="btn btn--ghost" data-contact="email" href="#contacts">Почта</a>
+          </div>
+        </div>
+        <form class="request-form reveal" data-request-form action="#request" method="post" enctype="multipart/form-data" novalidate>
+          <div class="hp" aria-hidden="true">
+            <label>Сайт<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <div class="field">
+            <label for="home-name">Имя <span class="req" aria-hidden="true">*</span></label>
+            <input id="home-name" name="name" type="text" autocomplete="name" required maxlength="80">
+            <p class="field__error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="home-phone">Телефон <span class="req" aria-hidden="true">*</span></label>
+            <input id="home-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="40">
+            <p class="field__error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="home-email">Электронная почта <span class="req" aria-hidden="true">*</span></label>
+            <input id="home-email" name="email" type="email" inputmode="email" autocomplete="email" required maxlength="120">
+            <p class="field__error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="home-direction">Направление работ <span class="req" aria-hidden="true">*</span></label>
+            <select id="home-direction" name="direction" required>
+              <option value="">Выберите направление</option>
+              <option>Металлоконструкции</option>
+              <option>Плазменная резка ЧПУ</option>
+              <option>Решётки и ограждения</option>
+              <option>Сварка и покраска</option>
+              <option>Чертежи и дизайн-макеты</option>
+              <option>Вентиляция и кондиционирование</option>
+              <option>Электрика и слаботочные системы</option>
+              <option>Инженерные сети</option>
+              <option>Бетонные и монолитные работы</option>
+              <option>Комплексное строительство</option>
+              <option>ПТО и исполнительная документация</option>
+              <option>Несколько направлений</option>
+            </select>
+            <p class="field__error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="home-message">Описание задачи <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="home-message" name="message" required maxlength="4000"></textarea>
+            <p class="field__error" hidden></p>
+          </div>
+          <label class="dropzone">
+            <input class="dropzone__input" type="file" name="files[]" accept=".jpg,.jpeg,.png,.webp,.gif,.pdf,.dwg,.dxf,image/*,application/pdf" multiple>
+            <span>Прикрепить чертёж или фотографию</span>
+            <span class="dropzone__hint">JPG, PNG, WEBP, GIF, PDF, DWG, DXF. До 4 файлов, каждый до 10 МБ.</span>
+          </label>
+          <p class="file-error" hidden></p>
+          <ul class="file-list"></ul>
+          <button class="btn" type="submit">Отправить заявку</button>
+          <p class="form-status" role="status" hidden></p>
+          <noscript>
+            <p>Без JavaScript форма не отправляет данные. Контакты — в подвале страницы, после того как вы впишете их в js/config.js.</p>
+          </noscript>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="wrap footer__grid">
+      <div>
+        <a class="logo" href="index.html">
+          <img src="assets/logo/logo.svg" width="42" height="42" alt="">
+          <span class="logo__name" data-bind="companyName">АСМН</span>
+        </a>
+        <p>Инженерно-строительная компания полного цикла. Собственное производство и собственные бригады.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Нижнее меню">
+        <h2>Разделы</h2>
+        <a href="services.html">Направления</a>
+        <a href="portfolio.html">Работы</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="brochure.html">Рекламный буклет</a>
+        <a href="#request">Обсудить проект</a>
+      </nav>
+      <div>
+        <h2>Контакты</h2>
+        <address>
+          <a data-contact="phone" href="#contacts"><span data-bind="phoneDisplay">+7 (___) ___-__-__</span></a>
+          <a data-contact="email" data-email-text href="#contacts">Укажите электронную почту</a>
+          <span data-bind="address">Укажите адрес офиса и производства</span>
+          <span data-bind="hours">Укажите график работы</span>
+        </address>
+      </div>
+    </div>
+    <div class="wrap footer__bar">
+      <p>© <span data-year>2026</span> <span data-bind="companyName">АСМН</span></p>
+      <a href="#content">Наверх страницы</a>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" hidden>
+    <img src="assets/icons/arrow-up.svg" width="16" height="16" alt="">
+    Наверх
+  </button>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox__backdrop" data-lightbox-close></div>
+    <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+      <button class="lightbox__close" type="button" data-lightbox-close>Закрыть</button>
+      <button class="lightbox__nav" type="button" data-lightbox-prev aria-label="Предыдущее фото">←</button>
+      <figure class="lightbox__figure">
+        <img class="lightbox__image" alt="">
+        <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+      </figure>
+      <button class="lightbox__nav" type="button" data-lightbox-next aria-label="Следующее фото">→</button>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
