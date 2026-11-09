@@ -236,8 +236,52 @@ li {
   .sheet, .sheet-label { margin-left: 0.75rem; }
 }
 
+@media screen and (max-width: 700px) {
+  body { overflow-x: hidden; }
+
+  .toolbar,
+  .sheet-label {
+    width: min(100% - 1rem, 32rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sheet,
+  .sheet--inside {
+    flex-direction: column;
+    width: min(100% - 1rem, 32rem);
+    height: auto;
+    margin: 0 auto 1rem;
+  }
+
+  .panel,
+  .panel--full,
+  .panel--flap {
+    width: 100%;
+    flex: none;
+    height: auto;
+    min-height: 78vw;
+  }
+
+  .panel__inner {
+    height: auto;
+    min-height: 78vw;
+    padding: 6mm 5mm;
+  }
+
+  .columns { columns: 1; }
+
+  h2 { font-size: 16pt; }
+  .cover__title { font-size: 22pt; }
+  .photo--mid { height: 42mm; }
+}
+
 @media screen {
   .sheet--inside { flex-direction: row-reverse; }
+}
+
+@media screen and (max-width: 700px) {
+  .sheet--inside { flex-direction: column; }
 }
 
 @page {
